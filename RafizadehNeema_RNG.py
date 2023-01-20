@@ -88,6 +88,7 @@ if __name__ == "__main__":
     # show figure (program only ends once closed
     plt.show()
     
+    # function creates a new text file named 'RNG_output' that is read and write, then writes the myx array into that text file and closes it
     file = open("RNG_output.txt", "w+")
     content = str(myx)
     file.write(content)
