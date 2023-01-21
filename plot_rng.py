@@ -5,7 +5,7 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
- # hooha
+# opens data file and reads it
 data = []
 
 with open('RNG_output.txt') as fp:

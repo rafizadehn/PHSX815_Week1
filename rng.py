@@ -81,20 +81,3 @@ if __name__ == "__main__":
         for item in myx:
             fp.write("%s\n" % item)
 
-
-    # create histogram of our data
-    #n, bins, patches = plt.hist(myx, 50, density=True, facecolor='g', alpha=0.75)
-
-    # plot formating options
-    #plt.xlabel('x')
-    #plt.ylabel('Probability')
-    #plt.title('Uniform random number')
-    #plt.grid(True)
-
-    # show figure (program only ends once closed
-    #plt.show()
-    
-    #file = open("file1.txt", "w+")
-    #content = str(myx)
-    #file.write(content)
-    #file.close()
