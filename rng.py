@@ -66,7 +66,7 @@ if __name__ == "__main__":
     random = Random(seed)
 
     # create some random data
-    N = 10000
+    N = 100000
 
     # an array of random numbers from numpy
     x = np.random.rand(N)
@@ -76,20 +76,25 @@ if __name__ == "__main__":
     for i in range(0,N):
         myx.append(random.rand())
 
+    # export to file
+    with open(r'RNG_output.txt', 'w') as fp:
+        for item in myx:
+            fp.write("%s\n" % item)
+
+
     # create histogram of our data
-    n, bins, patches = plt.hist(myx, 50, density=True, facecolor='g', alpha=0.75)
+    #n, bins, patches = plt.hist(myx, 50, density=True, facecolor='g', alpha=0.75)
 
     # plot formating options
-    plt.xlabel('x')
-    plt.ylabel('Probability')
-    plt.title('Uniform random number')
-    plt.grid(True)
+    #plt.xlabel('x')
+    #plt.ylabel('Probability')
+    #plt.title('Uniform random number')
+    #plt.grid(True)
 
     # show figure (program only ends once closed
-    plt.show()
+    #plt.show()
     
-    # function creates a new text file named 'RNG_output' that is read and write, then writes the myx array into that text file and closes it
-    file = open("RNG_output.txt", "w+")
-    content = str(myx)
-    file.write(content)
-    file.close()
+    #file = open("file1.txt", "w+")
+    #content = str(myx)
+    #file.write(content)
+    #file.close()
