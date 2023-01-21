@@ -76,20 +76,14 @@ if __name__ == "__main__":
     for i in range(0,N):
         myx.append(random.rand())
 
-    # create histogram of our data
-    n, bins, patches = plt.hist(myx, 50, density=True, facecolor='g', alpha=0.75)
+with open(r'RNG_output.txt', 'w') as fp:
+	for item in myx:
+		fp.write("%s\n" % item)
+	print('Done')
 
-    # plot formating options
-    plt.xlabel('x')
-    plt.ylabel('Probability')
-    plt.title('Uniform random number')
-    plt.grid(True)
 
-    # show figure (program only ends once closed
-    plt.show()
-    
     # function creates a new text file named 'RNG_output' that is read and write, then writes the myx array into that text file and closes it
-    file = open("RNG_output.txt", "w+")
-    content = str(myx)
-    file.write(content)
-    file.close()
+    #file = open("RNG_output.txt", "w+")
+    #content = str(myx)
+    #file.write(myx)
+    #file.close()
