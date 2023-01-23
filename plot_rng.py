@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # opens data file and reads it
-data = []
+data = [] # allows a space for data to populate
 
 with open('RNG_output.txt') as fp:
     for line in fp:
@@ -14,15 +14,16 @@ with open('RNG_output.txt') as fp:
         line=float(line)
         data.append(line)
 
+# converts data into an array for easier histogram creation
 data = np.asarray(data)
 
 # create histogram of our data
-n, bins, patches = plt.hist(data[data<=1], 50, density=True, facecolor='g', alpha=0.75)
+n, bins, patches = plt.hist(data[data<=1], 100, density=True, facecolor='orange', alpha=0.75)
 
 # plot formating options
-plt.xlabel('x')
+plt.xlabel('Randomly Generated Number')
 plt.ylabel('Probability')
-plt.title('Uniform random number')
+plt.title('Frequency of Randomly Generated Numbers')
 plt.grid(True)
 
 # show figure (program only ends once closed

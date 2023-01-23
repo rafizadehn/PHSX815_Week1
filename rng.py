@@ -76,7 +76,7 @@ if __name__ == "__main__":
     for i in range(0,N):
         myx.append(random.rand())
 
-    # export to file
+    # export to a created text file
     with open(r'RNG_output.txt', 'w') as fp:
         for item in myx:
             fp.write("%s\n" % item)
