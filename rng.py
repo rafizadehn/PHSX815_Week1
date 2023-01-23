@@ -66,7 +66,7 @@ if __name__ == "__main__":
     random = Random(seed)
 
     # create some random data
-    N = 100000
+    N = 10000
 
     # an array of random numbers from numpy
     x = np.random.rand(N)

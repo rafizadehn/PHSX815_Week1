@@ -18,7 +18,7 @@ with open('RNG_output.txt') as fp:
 data = np.asarray(data)
 
 # create histogram of our data
-n, bins, patches = plt.hist(data[data<=1], 100, density=True, facecolor='orange', alpha=0.75)
+n, bins, patches = plt.hist(data[data<=1], 40, density=True, facecolor='orange', alpha=0.75)
 
 # plot formating options
 plt.xlabel('Randomly Generated Number')
